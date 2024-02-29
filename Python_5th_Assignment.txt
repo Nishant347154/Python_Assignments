@@ -1,0 +1,47 @@
+1. What does an empty dictionary's code look like?
+---> An empty dictionary in Python is represented by a pair of curly braces {}
+ empty_dict = {}
+
+
+2. What is the value of a dictionary value with the key 'foo' and the value 42?
+---> The value of a dictionary with the key 'foo' and the value 42 would look like this:
+ {'foo': 42}
+ In this dictionary, 'foo' is the key, and 42 is the associated value.
+
+
+3. What is the most significant distinction between a dictionary and a list?
+---> Lists store and fetch data by position or index.
+     Dictionaries store and fetch data by unique keys.
+
+
+4. What happens if you try to access spam['foo'] if spam is {'bar: 100}?
+--->  if you try to access spam['foo'], it will raise a KeyError because the key 'foo' is not present
+  in the dictionary spam.
+
+
+5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and
+'cat' in spam.keys()?
+---> 'cat' in spam checks if the key 'cat' exists directly in the dictionary spam.
+'cat' in spam.keys() retrieves all keys of spam and then checks if the key 'cat' exists among those keys.
+
+
+6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and
+ 'cat' in spam.values()?
+---> 'cat' in spam checks if the value 'cat' exists directly as a key in the dictionary spam.
+'cat' in spam.values() checks if the value 'cat' exists among the values in the dictionary spam. 
+
+
+7. What is a shortcut for the following code?
+ if 'color' not in spam:
+ spam['color'] = 'black'
+---> A shortcut for the given code is to use the setdefault() method. Here's how you can do it:
+ spam.setdefault('color', 'black')
+
+ This method checks if the key 'color' exists in the dictionary spam. If it does not exist, it sets the value of 
+ the key to 'black'. If the key already exists, it returns the current value associated with the key. 
+ This achieves the same result as the provided code in a more concise way.
+
+8. How do you "pretty print" dictionary values using which module and function?
+---> You can "pretty print" dictionary values using the pprint module's pprint() function.
+ example : my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+           pprint.pprint(my_dict)

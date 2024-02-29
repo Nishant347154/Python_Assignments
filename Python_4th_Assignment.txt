@@ -1,0 +1,156 @@
+1. What exactly is []?
+---> It Represents a Empty List . 
+ 
+
+2. In a list of values stored in a variable called spam, how would you assign the value hello as the
+third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+Let pretend the spam includes the list [a,b,c,d] for the next three queries.
+---> To assign the value 'hello' as the third value in the list stored in the variable spam, 
+  you can use the index notation and assign the value directly like this:
+  spam = [2, 4, 6, 8, 10]
+  spam[2] = 'hello'
+  After executing this code, the list stored in the spam variable would be [2, 4, 'hello', 8, 10], 
+  with 'hello' as the third value.
+
+  If we pretend the spam includes the list [a, b, c, d] for the next three queries, the process would be the same. 
+  Here's how you would assign 'hello' as the third value in that list:
+  spam = ['a', 'b', 'c', 'd']
+  spam[2] = 'hello'
+  After executing this code, the list stored in the spam variable would be ['a', 'b', 'hello', 'd'], with 'hello' 
+  as the third value.
+
+
+
+3. What is the value of spam[int(int('3' * 2) / 11)]?
+---> Let's break down the expression spam[int(int('3' * 2) / 11)] step by step:
+
+ '3' * 2 evaluates to the string '33'.
+ int('33') converts the string '33' to an integer, which is 33.
+ int('33') / 11 evaluates to 33 / 11, which is 3.0.
+ int(3.0) converts the float 3.0 to an integer, which is 3.
+ So, spam[int(int('3' * 2) / 11)] is equivalent to spam[3].
+ If spam is [2, 4, 6, 8, 10], then the value of spam[3] is 8.
+
+
+
+4. What is the value of spam[-1]?
+---> In Python, negative indices are used to access elements from the end of a list.
+ If spam is [2, 4, 6, 8, 10], then spam[-1] refers to the last element of the list, which is 10.
+
+
+
+5. What is the value of spam[:2]?
+Let's pretend bacon has the list [3.14, 'cat',11,'cat', True] for the next three questions.
+---> If bacon is [3.14, 'cat', 11, 'cat', True], then bacon[:2] refers to a slice of the list
+ from the beginning up to (but not including) the element at index 2.
+ So, bacon[:2] would return [3.14, 'cat'].
+
+
+
+6. What is the value of bacon.index('cat')?
+---> If bacon is [3.14, 'cat', 11, 'cat', True], then bacon.index('cat') returns the index of the first occurrence 
+of the element 'cat' in the list.
+In this case, the value of bacon.index('cat') would be 1, as 'cat' first occurs at index 1 in the list.
+
+
+
+7. How does bacon.append(99) change the look of the list value in bacon?
+---> The append() method in Python is used to add a single element to the end of a list.
+ If bacon is [3.14, 'cat', 11, 'cat', True], then bacon.append(99) would add the value 99 to the end of the list.
+ After executing bacon.append(99), the list bacon would look like this: [3.14, 'cat', 11, 'cat', True, 99].
+
+
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+---> The remove() method in Python is used to remove the first occurrence of a specified value from a list.
+ If bacon is [3.14, 'cat', 11, 'cat', True], then bacon.remove('cat') would remove the first occurrence of the
+ string 'cat' from the list.
+ After executing bacon.remove('cat'), the list bacon would look like this: [3.14, 11, 'cat', True].
+
+9. What are the list concatenation and list replication operators?
+---> In Python, the list concatenation operator is +, and it is used to concatenate (combine) two or more lists 
+    into a single list.
+ For example:
+ list1 = [1, 2, 3]
+ list2 = [4, 5, 6]
+ concatenated_list = list1 + list2
+ print(concatenated_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+
+In Python, the list concatenation operator is +, and it is used to concatenate (combine) two or more lists into a 
+single list.
+
+ For example:
+ list1 = [1, 2, 3]
+ list2 = [4, 5, 6]
+ concatenated_list = list1 + list2
+ print(concatenated_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+ The list replication operator is *, and it is used to replicate (repeat) the elements of a list a specified number
+ of times.
+ For example:
+ list1 = [1, 2, 3]
+ replicated_list = list1 * 3
+ print(replicated_list)  # Output: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+
+10. What is difference between the list methods append() and insert()?
+---> Both are use to add elemnts to a list But Difference is append() adds an element to the end of the list.
+   and insert() inserts an element at a specific position in the list.
+
+
+
+11. What are the two methods for removing items from a list?
+---> remove(): Removes the first occurrence of a specified value from the list.
+      pop(): Removes and returns the item at the specified index (or the last item if index is not provided).
+
+
+
+12. Describe how list values and string values are identical.
+---> They both support sequential access, indexing, and slicing.
+ They both can be iterated over using loops.
+ They both support concatenation and membership testing.
+ They both have a length that can be determined using the len() function.
+
+
+
+13. What's the difference between tuples and lists?
+---> Lists are mutable (can be modified), defined with square brackets [ ].
+ Tuples are immutable (cannot be modified), defined with parentheses ( ).
+ Lists are typically used for collections of similar items.
+ Tuples are often used for fixed collections of items where the order matters, but the data should not be modified.
+ Tuples are generally more memory-efficient and faster to iterate over than lists.
+
+
+
+14. How do you type a tuple value that only contains the integer 42?
+---> To create a tuple value that only contains the integer 42, you can use the following syntax:
+ my_tuple = (42,)
+ Note the comma after the integer 42. It's important to include the comma even if the tuple contains 
+ only one element. This is because the parentheses are used for grouping, so the comma distinguishes between 
+ a single-element tuple and just the integer itself.
+
+
+
+15. How do you get a list values tuple form? How do you get a tuple values list form?
+---> To convert a list to a tuple, you can use the tuple() constructor. For example:
+  my_list = [1, 2, 3]
+  my_tuple = tuple(my_list)
+
+  To convert a tuple to a list, you can use the list() constructor. For example:
+  my_tuple = (1, 2, 3)
+  my_list = list(my_tuple)
+  these constructors take an iterable (such as a list or tuple) as an argument and return a new instance of the 
+  desired data type.
+
+
+
+16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they
+ contain?
+---> Variables that "contain" list values in Python actually contain references or pointers to the memory 
+   locations where the list values are stored. They do not store the list values directly.
+
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+---> copy.copy() creates a shallow copy, duplicating the top-level object but not its nested objects.
+  copy.deepcopy() creates a deep copy, duplicating both the top-level object and all its nested objects recursively.

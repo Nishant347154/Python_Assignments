@@ -1,0 +1,59 @@
+1. To what does a relative path refer?
+---> A relative path refers to the location of a file or directory relative to the current working directory. 
+  It does not start with the root directory but instead describes the path from the current location.
+
+
+2. What does an absolute path start with your operating system?
+---> An absolute path starts with the root directory of the operating system. On most operating systems,
+ including Windows, macOS, and Linux, the root directory is represented by a forward slash (/) for Unix-based systems
+ and a drive letter followed by a colon (:) for Windows systems. For example:
+
+Unix-based systems: /
+Windows systems: C:\ (or another drive letter)
+Absolute paths provide the complete location of a file or directory, starting from the root of the filesystem.
+
+
+3. What do the functions os.getcwd() and os.chdir() do?
+---> os.getcwd() gets the current working directory.
+     os.chdir(path) changes the current working directory to the specified path.
+
+
+4. What are the . and .. folders?
+---> . (dot) refers to the current directory.
+ .. (dot dot) refers to the parent directory.
+
+
+5. In C:\bacon\eggs\spam.txt, which part is the dir name, and which part is the base name?
+---> In the path C:\bacon\eggs\spam.txt:
+
+The directory name is C:\bacon\eggs.
+The base name is spam.txt.
+The directory name refers to the directory containing the file or directory, while the base name refers to the 
+actual file or directory name itself, excluding the directory path.
+
+
+6. What are the three “mode” arguments that can be passed to the open() function?
+---> The three "mode" arguments that can be passed to the open() function are:
+ 'r': Read mode. Opens the file for reading.
+ 'w': Write mode. Opens the file for writing. Creates a new file or overwrites an existing file.
+ 'a': Append mode. Opens the file for writing. Appends data to the end of the file if the file exists.
+  Creates a new file if the file does not exist.
+
+
+7. What happens if an existing file is opened in write mode?
+---> If an existing file is opened in write mode ('w') using the open() function in Python:
+The existing contents of the file are completely overwritten.
+If the file does not exist, a new file is created.
+Therefore, it's crucial to exercise caution when using write mode, as it can lead to the loss of existing data 
+in the file.
+
+
+8. How do you tell the difference between read() and readlines()?
+---> read(): Reads the entire contents of the file as a single string.
+readlines(): Reads the contents of the file line by line and returns a list where each element corresponds to a line in the file.
+
+
+
+9. What data structure does a shelf value resemble?
+---> A shelf value in Python resembles a dictionary data structure. It behaves similarly to a dictionary, 
+ allowing you to store and retrieve key-value pairs. However, it is persistent and stored on disk, making it suitable for storing large amounts of data that need to be accessed across multiple program executions.

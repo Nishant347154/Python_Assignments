@@ -1,0 +1,53 @@
+1. Is the Python Standard Library included with PyInputPlus?
+---> No, the Python Standard Library is not included with PyInputPlus.
+ PyInputPlus is a separate library that provides additional features for taking user input, 
+ such as input validation and retrying. However, PyInputPlus may utilize functions from the
+ Python Standard Library internally to implement its functionality.
+
+
+2. Why is PyInputPlus commonly imported with import pyinputplus as pypi?
+---> PyInputPlus is commonly imported with the alias pypi to make the code more concise and easier 
+ to read. Using an alias allows developers to reference PyInputPlus functions and classes using a shorter
+  and more convenient name. This can improve code readability, especially when PyInputPlus functions are used 
+  frequently throughout the codebase.
+  For example, instead of typing pyinputplus.inputInt(), you can simply write pypi.inputInt(), 
+  which is shorter and easier to type. Additionally, using an alias makes it clear that the code 
+  is using PyInputPlus functionality. However, the choice of alias is arbitrary and can be customized
+  based on developer preference.
+
+3. How do you distinguish between inputInt() and inputFloat()?
+---> inputInt() is used to accept integer input from the user.
+ inputFloat() is used to accept floating-point input from the user.
+
+
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+---> You can ensure that the user enters a whole number between 0 and 99 using PyInputPlus by using the inputInt() 
+ function along with the min and max parameters to specify the acceptable range. Here's how you can do it:
+
+ import pyinputplus as pyip
+
+ user_input = pyip.inputInt(prompt="Enter a number between 0 and 99: ", min=0, max=99)
+
+ This code prompts the user to enter a number between 0 and 99. If the user enters a number outside this range or 
+ a non-integer value, PyInputPlus will automatically re-prompt the user until a valid input is provided.
+
+
+
+5. What is transferred to the keyword arguments allowRegexes and blockRegexes?
+---> allowRegexes: Accepts a list of regular expressions. Input matching any of these expressions is considered valid.
+     blockRegexes: Accepts a list of regular expressions. Input matching any of these expressions is considered invalid.
+
+
+
+
+6. If a blank input is entered three times, what does inputStr(limit=3) do?
+---> If a blank input is entered three times while using inputStr(limit=3), PyInputPlus raises a 
+ ValidationException after the third attempt. This means that if the user fails to provide a non-blank input
+ within three attempts, the function call will fail, and a ValidationException will be raised.
+
+
+
+7. If blank input is entered three times, what does inputStr(limit=3, default='hello') do?
+---> If blank input is entered three times while using inputStr(limit=3, default='hello'), PyInputPlus returns the 
+ default value 'hello' after the third attempt. This means that if the user fails to provide a non-blank input within 
+ three attempts, the function call will return the default value 'hello'.

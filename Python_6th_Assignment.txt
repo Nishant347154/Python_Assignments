@@ -1,0 +1,95 @@
+1. What are escape characters, and how do you use them?
+---> Escape characters in Python are special characters preceded by a backslash (\) that are used to represent
+  characters that are difficult or impossible to represent directly in a string. They allow you to include special
+  characters such as newline (\n), tab (\t), backslash (\\), and others in strings.
+ \n: Newline character. Inserts a newline.
+ \t: Tab character. Inserts a tab.
+ \\: Backslash character. Inserts a single backslash.
+ \': Single quote character. Inserts a single quote within a single-quoted string.
+ \": Double quote character. Inserts a double quote within a double-quoted string.
+Example usage:
+print("Hello\nWorld")  # Prints "Hello" on one line and "World" on the next line
+print("Hello\tWorld")  # Prints "Hello" followed by a tab and then "World"
+print("This is a backslash: \\")  # Prints "This is a backslash: \"
+print('He said, "Hello"')  # Prints 'He said, "Hello"'
+ 
+
+2. What do the escape characters n and t stand for?
+--->The escape characters \n and \t stand for:
+ \n: Newline character. It inserts a newline, causing the text following it to appear on a new line.
+ \t: Tab character. It inserts a tab, causing the text following it to be indented as if it were separated by a tab space.
+
+
+3. What is the way to include backslash characters in a string?
+---> To include a backslash character (\) in a string, you need to use the escape character \\.
+ my_string = "This is a backslash: \\"
+ print(my_string)
+
+
+4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the
+word Howl's not escaped a problem?
+---> When a string is enclosed in single quotes (') and contains an apostrophe, like in "Howl's Moving Castle", 
+ there is no need to escape the apostrophe. Python interprets the apostrophe within the string as part of the string 
+ literal and not as a delimiter for the string.
+
+
+5. How do you write a string of newlines if you don't want to use the n character?
+---> If you don't want to use the \n escape sequence to represent newlines in a string, you can achieve the same result
+  by using triple quotes (''' or """) to create a multi-line string. Here's an example:
+ my_string = '''Line 1
+ Line 2
+ Line 3'''
+ print(my_string)
+
+ This will output:
+ Line 1
+ Line 2
+ Line 3
+
+
+6. What are the values of the given expressions?
+  'Hello,world!'[1]
+  'Hello,world!'[0:5]
+  'Hello,world!'[:5]
+  'Hello,world!'[3:]
+---> 'Hello,world!'[1]: Returns the character at index 1, which is 'e'.
+   'Hello,world!'[0:5]: Returns the substring from index 0 to index 4 (excluding index 5), which is 'Hello'.
+   'Hello,world!'[:5]: Returns the substring from the beginning up to (but not including) index 5, which is 'Hello'.
+   'Hello,world!'[3:]: Returns the substring from index 3 to the end of the string, which is 'lo,world!'.
+   So, the values of the expressions are 'e', 'Hello', 'Hello', and 'lo,world!', respectively.
+
+7. What are the values of the following expressions?
+ 'Hello'.upper()
+ 'Hello'.upper().isupper()
+ 'Hello'.upper().lower()
+---> 'Hello'.upper(): Returns the string 'HELLO', as upper() converts all characters in the string to uppercase.
+'Hello'.upper().isupper(): Returns True, as the string 'HELLO' returned by upper() is entirely in uppercase.
+'Hello'.upper().lower(): Returns the string 'hello', as lower() converts all characters in the string to lowercase after converting them to uppercase with upper().
+So, the values of the expressions are 'HELLO', True, and 'hello', respectively.
+
+
+8. What are the values of the following expressions?
+  'Remember, remember, the fifth of July'.split()
+ '-'join('There can only one.'.split())
+---> 'Remember, remember, the fifth of July'.split(): Splits the string into a list of words, 
+    using whitespace as the delimiter. So, the result is ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July'].
+
+ ' '.join('There can only one.'.split()): Splits the string into a list of words, then joins these words using
+   a space ' ' as the separator. So, the result is 'There can only one.'.
+
+ So, the values of the expressions are ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July'] and 
+ 'There can only one.', respectively.
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+---> Right-justifying a string: Use the rjust() method.
+ Left-justifying a string: Use the ljust() method.
+ Centering a string: Use the center() method.
+
+
+10. What is the best way to remove whitespace characters from the start or end?
+---> The best way to remove whitespace characters from the start or end of a string is to use the strip() method.
+The strip() method removes leading and trailing whitespace characters (spaces, tabs, newlines) from the string, 
+leaving the content in between intact.
+
+
+
+

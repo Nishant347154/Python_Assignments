@@ -1,0 +1,100 @@
+1. What does RGBA stand for?
+---> RGBA stands for Red, Green, Blue, and Alpha. It is a color model used to represent colors in computer graphics, 
+ where each component (Red, Green, Blue) is represented by an integer value ranging from 0 to 255, indicating its intensity,
+and the Alpha component represents the opacity of the color.
+
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+---> To get the RGBA (Red, Green, Blue, Alpha) value of any image using the Pillow module in Python, you can use the
+ getpixel() method. Here's how you can do it:
+
+from PIL import Image
+
+# Open an image
+image = Image.open('example.png')
+
+# Get the RGBA value of a specific pixel (e.g., at coordinates x=10, y=20)
+rgba_value = image.getpixel((10, 20))
+
+print("RGBA value:", rgba_value)
+
+In this example, image.getpixel((10, 20)) retrieves the RGBA value of the pixel at coordinates (10, 20) in the image. 
+Replace 'example.png' with
+ the path to your image file.
+
+
+
+3. What is a box tuple, and how does it work?
+---> A box tuple in the context of the Pillow module is a tuple that represents a rectangular region in an image. 
+It consists of four integer values (left, top, right, bottom) representing the coordinates of the top-left and bottom-right corners of the rectangular region.
+
+left: The x-coordinate of the top-left corner.
+top: The y-coordinate of the top-left corner.
+right: The x-coordinate of the bottom-right corner.
+bottom: The y-coordinate of the bottom-right corner.
+This tuple defines a rectangular area in the image where operations such as cropping, resizing, or pasting can be applied.
+
+
+4. Use your image and load in notebook then, How can you find out the width and height of an
+Image object?
+---> 
+To find out the width and height of an Image object loaded in a Jupyter notebook using the Pillow module, you can use the size attribute of the Image object.
+ Here's how you can do it:
+from PIL import Image
+
+# Open an image
+image = Image.open('example.jpg')
+
+# Get the width and height of the image
+width, height = image.size
+
+print("Width:", width)
+print("Height:", height)
+
+In this example, image.size returns a tuple (width, height) representing the dimensions of the image.
+ You can then access the width and height values separately by unpacking the tuple. Replace 'example.jpg' with the path to your image file.
+
+
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left
+quarter of it?
+---> To get an Image object for a 100x100 image, excluding the lower-left quarter of it, you can use the crop() method 
+of the Image object.
+
+from PIL import Image
+
+# Open an image
+image = Image.open('example.jpg')
+
+# Crop the image to exclude the lower-left quarter
+cropped_image = image.crop((0, 50, 50, 100))
+
+# Display or save the cropped image as needed
+
+
+
+6. After making changes to an Image object, how could you save it as an image file?
+---> After making changes to an Image object, you can save it as an image file using the save() method of the Image object.
+# Assuming 'image' is the Image object with changes
+image.save('output.jpg')
+
+
+7. What module contains Pillow’s shape-drawing code?
+---> The module that contains Pillow's shape-drawing code is the ImageDraw module.
+
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind
+of object?
+---> Image objects in Pillow do not have drawing methods. Instead, you need to use the ImageDraw object to draw shapes and
+ text on images. You can obtain an ImageDraw object by importing the ImageDraw module and then creating an instance of the ImageDraw.Draw() class, passing the Image object as an argument.
+
+Here's how you can do it:
+from PIL import Image, ImageDraw
+
+# Open an image
+image = Image.open('example.jpg')
+
+# Create an ImageDraw object
+draw = ImageDraw.Draw(image)
+
+# Now you can use the drawing methods of the ImageDraw object to draw shapes and text on the image

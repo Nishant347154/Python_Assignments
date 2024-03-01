@@ -1,0 +1,203 @@
+1. Create a list called years_list, starting with the year of your birth, and each year thereafter until
+the year of your fifth birthday. For example, if you were born in 1980. the list would be years_list =
+[1980, 1981, 1982, 1983, 1984, 1985].
+---> 
+# Assuming the year of birth is 2000
+birth_year = 2000
+
+# Create years_list starting from the birth year until the fifth birthday
+years_list = list(range(birth_year, birth_year + 5))
+
+print(years_list)
+
+output - [2000, 2001, 2002, 2003, 2004]
+
+
+2. In which year in years_list was your third birthday? Remember, you were 0 years of age for your
+first year.
+---> 
+In the years_list created as per the previous example, the year corresponding to your third birthday would be at index 3,
+ considering that you were 0 years of age for your first year.
+
+Therefore, to find out the year of your third birthday, you can access the element at index 3 in the years_list.
+
+Here's how you can do it:
+# Assuming the years_list is already created
+years_list = [2000, 2001, 2002, 2003, 2004]
+
+# The year of your third birthday is at index 3
+third_birthday_year = years_list[3]
+
+print("Year of your third birthday:", third_birthday_year)
+
+output - Year of your third birthday: 2003
+
+
+
+3.In the years list, which year were you the oldest?
+---> 
+To find out the year when you were the oldest in the years_list, you can simply take the last element of the list, 
+as it represents the latest year.
+# Assuming the years_list is already created
+years_list = [2000, 2001, 2002, 2003, 2004]
+
+# Get the last element of the years_list
+oldest_year = years_list[-1]
+
+print("Year when you were the oldest:", oldest_year)
+
+output - Year when you were the oldest: 2004
+
+
+
+4. Make a list called things with these three strings as elements: "mozzarella", "cinderella","salmonella".
+---> 
+things = ["mozzarella", "cinderella", "salmonella"]
+print(things)
+
+ouput - ["mozzarella", "cinderella", "salmonella"]
+
+
+5. Capitalize the element in things that refers to a person and then print the list. Did it change the
+element in the list?
+---> To capitalize the element in things that refers to a person ("cinderella") and then print the list, you can 
+use the capitalize() method to capitalize the first letter of the string. This will not change the element in the list directly;
+ instead, you need to assign the capitalized string back to the list.
+things = ["mozzarella", "cinderella", "salmonella"]
+
+# Capitalize the element referring to a person
+things[1] = things[1].capitalize()
+
+print(things)
+
+output - ['mozzarella', 'Cinderella', 'salmonella']
+
+6. Make a surprise list with the elements "Groucho", "Chico" and "Harpo"
+---> 
+surprise = ["Groucho", "Chico", "Harpo"]
+print(surprise)
+output - ['Groucho', 'Chico', 'Harpo']
+
+7. Lowercase the last element of the surprise list, reverse it, and then capitalize it.
+---> 
+# Lowercase the last element
+last_element_lower = surprise[-1].lower()
+
+# Reverse the last element
+last_element_reversed = last_element_lower[::-1]
+
+# Capitalize the reversed last element
+last_element_capitalized = last_element_reversed.capitalize()
+
+print(last_element_capitalized)
+
+outut - Oprah
+
+8. Make an English-to-French dictionary called e2f and print it. Here are your starter words: dog is
+chien, cat is chat, and walrus is morse.
+---> # Create the English-to-French dictionary
+e2f = {
+    "dog": "chien",
+    "cat": "chat",
+    "walrus": "morse"
+}
+
+# Print the dictionary
+print(e2f)
+
+output - {'dog': 'chien', 'cat': 'chat', 'walrus': 'morse'}
+
+9. Write the French word for walrus in your three-word dictionary e2f.
+----> 
+ Retrieve the French word for "walrus" from the e2f dictionary
+french_word_for_walrus = e2f["walrus"]
+
+print("French word for 'walrus':", french_word_for_walrus)
+
+output - French word for 'walrus': morse
+
+10. Make a French-to-English dictionary called f2e from e2f. Use the items method.
+---> 
+# Create the French-to-English dictionary f2e from e2f using items() method
+f2e = {french: english for english, french in e2f.items()}
+
+# Print the dictionary
+print(f2e)
+
+output - {'chien': 'dog', 'chat': 'cat', 'morse': 'walrus'}
+
+11. Print the English version of the French word chien using f2e.
+---> 
+To print the English version of the French word "chien" using the f2e dictionary, you can simply use "chien" as the key 
+to access its corresponding English translation. Here's how you can do it:
+
+# Retrieve the English version of the French word "chien" from the f2e dictionary
+english_word_for_chien = f2e["chien"]
+
+print("English version of 'chien':", english_word_for_chien)
+
+output - English version of 'chien': dog
+
+
+12. Make and print a set of English words from the keys in e2f.
+---> To create and print a set of English words from the keys in the e2f dictionary, you can use the keys() method 
+to obtain the keys and then convert them to a set. Here's how you can do it:
+
+# Create a set of English words from the keys in the e2f dictionary
+english_words_set = set(e2f.keys())
+
+# Print the set of English words
+print("Set of English words:", english_words_set)
+
+output - Set of English words: {'dog', 'cat', 'walrus'}
+
+
+13. Make a multilevel dictionary called life. Use these strings for the topmost keys: 'animals', 'plants',
+and 'other'. Make the 'animals' key refer to another dictionary with the keys 'cats', 'octopi', and
+'emus'. Make 'cats' key refer to a list of strings with the values 'Henri', 'Grumpy', and 'Lucy'.
+Make all the other keys refer to empty dictionaries.
+---> 
+You can create the multilevel dictionary life as described. Here's how you can do it:
+# Create the multilevel dictionary life
+life = {
+    'animals': {
+        'cats': ['Henri', 'Grumpy', 'Lucy'],
+        'octopi': {},
+        'emus': {}
+    },
+    'plants': {},
+    'other': {}
+}
+
+# Print the multilevel dictionary
+print(life)
+output - {'animals': {'cats': ['Henri', 'Grumpy', 'Lucy'], 'octopi': {}, 'emus': {}}, 'plants': {}, 'other': {}}
+
+14. Print the top-level keys of life.
+---> 
+To print the top-level keys of the life dictionary, you can use the keys() method. Here's how you can do it:
+# Print the top-level keys of the life dictionary
+top_level_keys = life.keys()
+
+print("Top-level keys of life:", top_level_keys)
+
+output - Top-level keys of life: dict_keys(['animals', 'plants', 'other'])
+
+15. Print the keys for life['animals'].
+---> 
+# Print the keys for life['animals']
+animals_keys = life['animals'].keys()
+
+print("Keys for life['animals']:", animals_keys)
+output - 
+Keys for life['animals']: dict_keys(['cats', 'octopi', 'emus'])
+
+
+16. Print the values for life['animals']['cats']
+---> 
+# Print the values for life['animals']['cats']
+cats_values = life['animals']['cats']
+
+print("Values for life['animals']['cats']:", cats_values)
+
+output - Values for life['animals']['cats']: ['Henri', 'Grumpy', 'Lucy']

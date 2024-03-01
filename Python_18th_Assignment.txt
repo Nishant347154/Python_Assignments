@@ -1,0 +1,105 @@
+1. Create a zoo.py file first. Define the hours() function, which prints the string 'Open 9-5 daily'.
+Then, use the interactive interpreter to import the zoo module and call its hours() function.
+---> 
+1.Create a new file named zoo.py.
+2.Define the hours() function inside zoo.py with the specified behavior.
+3. Save the file.
+# zoo.py
+
+def hours():
+    print('Open 9-5 daily')
+After creating the zoo.py file and defining the hours() function, you can use it in other Python scripts by importing zoo. For example:
+
+# Example usage in another Python script
+import zoo
+
+zoo.hours()  # This will print 'Open 9-5 daily'
+
+
+
+2. In the interactive interpreter, import the zoo module as menagerie and call its hours() function.
+---> 
+1.Launch the Python interpreter.
+2.Import the zoo module as menagerie.
+3.Call the hours() function using the menagerie alias.
+# Launch the Python interpreter
+
+# Import the zoo module as menagerie
+>>> import zoo as menagerie
+
+# Call the hours() function using the menagerie alias
+>>> menagerie.hours()
+Open 9-5 daily
+This will import the zoo module with the alias menagerie and call its hours() function, 
+which will print 'Open 9-5 daily' as expected.
+
+
+3. Using the interpreter, explicitly import and call the hours() function from zoo.
+---> 
+1.Launch the Python interpreter.
+2.Import the hours() function directly from the zoo module.
+3.Call the hours() function.
+
+# Launch the Python interpreter
+
+# Import the hours() function directly from the zoo module
+>>> from zoo import hours
+
+# Call the hours() function
+>>> hours()
+Open 9-5 daily
+
+
+4. Import the hours() function as info and call it.
+---> # Import the hours() function as info
+from zoo import hours as info
+
+# Call the info() function
+info()
+
+This will import the hours() function from the zoo module with the alias info and then call it, 
+resulting in the output 'Open 9-5 daily
+
+
+5. Create a plain dictionary with the key-value pairs 'a': 1, 'b': 2, and 'c': 3, and print it out.
+---> 
+# Create the dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Print the dictionary
+print(my_dict)
+
+output - {'a': 1, 'b': 2, 'c': 3}
+
+
+
+6.Make an OrderedDict called fancy from the same pairs listed in 5 and print it. Did it print in the
+same order as plain?
+---> from collections import OrderedDict
+
+# Create the OrderedDict
+fancy = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+
+# Print the OrderedDict
+print(fancy)
+
+output - OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+
+
+
+7. Make a default dictionary called dict_of_lists and pass it the argument list. Make the list
+dict_of_lists['a'] and append the value 'something for a' to it in one assignment. Print
+dict_of_lists['a'].
+---> from collections import defaultdict
+
+# Create a defaultdict with lists as default values
+dict_of_lists = defaultdict(list)
+
+# Append 'something for a' to the list associated with key 'a'
+dict_of_lists['a'].append('something for a')
+
+# Print the value associated with key 'a'
+print(dict_of_lists['a'])
+
+output - ['something for a']
+

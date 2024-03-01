@@ -1,0 +1,111 @@
+1.How many seconds are in an hour? Use the interactive interpreter as a calculator and multiply the
+number of seconds in a minute (60) by the number of minutes in an hour (also 60).
+sol. 60
+---> 
+seconds_in_minute = 60
+minutes_in_hour = 60
+
+seconds_in_hour = seconds_in_minute * minutes_in_hour
+print(seconds_in_hour)
+
+ouput - 3600
+
+
+2. Assign the result from the previous task (seconds in an hour) to a variable called
+seconds_per_hour.
+---> 
+seconds_per_hour = 3600
+print(seconds_per_hour)
+output - 3600
+Now, the variable seconds_per_hour holds the value 3600, representing the number of seconds in an hour.
+
+
+3. How many seconds do you think there are in a day? Make use of the variables seconds per hour
+and minutes per hour.
+---> To calculate the number of seconds in a day, you can use the variables seconds_per_hour 
+(which is already assigned as 3600) and minutes_per_hour (which is assumed to be 60 as per the previous calculation).
+
+There are 24 hours in a day, so you can multiply the number of seconds per hour by 24 to get the total number of seconds
+ in a day.
+
+seconds_per_hour = 3600
+minutes_per_hour = 60
+hours_per_day = 24
+
+seconds_per_day = seconds_per_hour * hours_per_day
+print(seconds_per_day)
+
+otput - 86400
+So, there are 86,400 seconds in a day.
+
+
+4. Calculate seconds per day again, but this time save the result in a variable called seconds_per_day
+---> 
+seconds_per_hour = 3600
+hours_per_day = 24
+
+seconds_per_day = seconds_per_hour * hours_per_day
+print(seconds_per_day)
+
+output - 86400
+
+
+5. Divide seconds_per_day by seconds_per_hour. Use floating-point (/) division.
+---> 
+seconds_per_day = 86400
+seconds_per_hour = 3600
+
+result = seconds_per_day / seconds_per_hour
+print(result)
+
+output - 24.0
+
+
+6. Divide seconds_per_day by seconds_per_hour, using integer (//) division. Did this number agree
+with the floating-point value from the previous question, aside from the final .0?
+---> To divide seconds_per_day by seconds_per_hour using integer division (//), you can simply use the // operator.
+ Here's how you can do it:
+seconds_per_day = 86400
+seconds_per_hour = 3600
+
+result = seconds_per_day // seconds_per_hour
+print(result)
+output - 24
+
+7. Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to
+its next() method: 2, 3, 5, 7, 11, ...
+---> To create a generator called genPrimes that returns the sequence of prime numbers on successive calls to its next()
+ method, you can implement the generator function as follows:
+
+def genPrimes():
+    primes = [2]  # Start with the first prime number
+    yield 2  # Yield the first prime number
+    
+    num = 3  # Start checking for primes from 3
+    
+    while True:
+        is_prime = True
+        
+        # Check if the current number is prime
+        for prime in primes:
+            if num % prime == 0:
+                is_prime = False
+                break
+                
+        if is_prime:
+            primes.append(num)
+            yield num  # Yield the prime number
+            
+        num += 2  # Move to the next odd number
+
+# Example usage:
+primes_generator = genPrimes()
+print(next(primes_generator))  # Output: 2
+print(next(primes_generator))  # Output: 3
+print(next(primes_generator))  # Output: 5
+print(next(primes_generator))  # Output: 7
+print(next(primes_generator))  # Output: 11
+# Continue calling next(primes_generator) to get successive prime numbers
+
+This generator function generates prime numbers infinitely. You can call next() on the generator object primes_generator
+ to get successive prime numbers.
